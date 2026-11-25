@@ -1,0 +1,600 @@
+#root { min-height: 100vh; }
+
+.app-shell {
+  min-height: 100vh;
+  background: #f4f7fb;
+  color: #172033;
+}
+
+.topbar {
+  height: 68px;
+  padding: 0 clamp(20px, 5vw, 64px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-bottom: 1px solid #e7edf5;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.brand-mark.MuiAvatar-root {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  color: #fff;
+  background: #2563eb;
+}
+
+.brand-name.MuiTypography-root {
+  color: #172033;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+
+.topbar-tag.MuiChip-root {
+  height: 26px;
+  color: #64748b;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.main-content {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 38px 0 32px;
+}
+
+.page-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.eyebrow.MuiTypography-root {
+  margin-bottom: 6px;
+  color: #2563eb;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.page-title.MuiTypography-root {
+  margin: 0 0 4px;
+  color: #172033;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(28px, 4vw, 34px);
+  font-weight: 800;
+  letter-spacing: -1.2px;
+  line-height: 1.2;
+}
+
+.page-heading .MuiTypography-body1 {
+  font-size: 14px;
+}
+
+.add-button.MuiButton-root {
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 8px;
+  background: #2563eb;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.16);
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.add-button.MuiButton-root:hover {
+  background: #1d4ed8;
+  box-shadow: 0 5px 12px rgba(37, 99, 235, 0.22);
+}
+
+.product-form-panel.MuiPaper-root {
+  margin-top: 25px;
+  border: 1px solid #e7edf5;
+  border-top: 3px solid #2563eb;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.025);
+}
+
+.product-form-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px 22px 12px;
+  background: linear-gradient(135deg, #f8fbff 0%, #fff 72%);
+}
+
+.product-form-title.MuiTypography-root {
+  margin-bottom: 3px;
+  color: #1e293b;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.product-form-header .MuiTypography-body2 {
+  font-size: 12px;
+}
+
+.product-form-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2px 16px;
+  padding: 8px 22px 2px;
+}
+
+.product-form-fields .MuiInputLabel-root,
+.product-form-fields .MuiInputBase-input {
+  font-size: 13px;
+}
+
+.product-form-fields .MuiFormHelperText-root {
+  min-height: 18px;
+  margin-top: 4px;
+  font-size: 10px;
+}
+
+.product-form-actions.MuiStack-root {
+  padding: 12px 22px 20px;
+}
+
+.product-form-actions .MuiButton-root {
+  min-height: 38px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.product-form-actions .MuiButton-containedPrimary {
+  background: #2563eb;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+  margin-top: 25px;
+}
+
+.summary-card.MuiPaper-root {
+  min-height: 124px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px 22px;
+  border: 1px solid #e7edf5;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.025);
+}
+
+.summary-icon.MuiAvatar-root {
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+.summary-icon.lavender {
+  color: #2563eb;
+  background: #eaf1ff;
+}
+
+.summary-icon.mint {
+  color: #16856b;
+  background: #e7f6f1;
+}
+
+.summary-icon.peach {
+  color: #b86a27;
+  background: #fff2e6;
+}
+
+.summary-card .MuiTypography-body2 {
+  margin: 1px 0 4px;
+  font-size: 12px;
+}
+
+.summary-value.MuiTypography-root {
+  overflow: hidden;
+  color: #28273d;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(19px, 2.3vw, 24px);
+  font-weight: 800;
+  letter-spacing: -0.7px;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.summary-card .MuiTypography-caption {
+  display: block;
+  margin-top: 5px;
+  font-size: 11px;
+}
+
+.catalog-card.MuiPaper-root {
+  overflow: hidden;
+  border: 1px solid #e7edf5;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.025);
+}
+
+.catalog-toolbar {
+  min-height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 17px 22px;
+  border-top: 3px solid #2563eb;
+  background: linear-gradient(180deg, #fafdff 0%, #fff 100%);
+}
+
+.section-title.MuiTypography-root {
+  margin-bottom: 3px;
+  color: #1e293b;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.catalog-toolbar .MuiTypography-body2 {
+  font-size: 12px;
+}
+
+.toolbar-actions {
+  align-items: center;
+}
+
+.search-field {
+  width: 245px;
+}
+
+.search-field .MuiOutlinedInput-root {
+  border-radius: 8px;
+  background: #fff;
+  font-size: 12px;
+}
+
+.search-field .MuiOutlinedInput-notchedOutline {
+  border-color: #dde5ef;
+}
+
+.search-field .MuiInputAdornment-root {
+  color: #9997a9;
+}
+
+.toolbar-actions .MuiIconButton-root {
+  width: 38px;
+  height: 38px;
+  color: #77758d;
+  border: 1px solid #dde5ef;
+  border-radius: 8px;
+}
+
+.table-scroll {
+  min-height: 218px;
+  border-top: 1px solid #edf1f6;
+}
+
+.table-scroll .MuiTable-root {
+  min-width: 700px;
+}
+
+.table-scroll .MuiTableCell-head {
+  padding: 13px 20px;
+  color: #89879b;
+  background: #f8fafc;
+  border-bottom: 1px solid #edf1f6;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+}
+
+.table-scroll .MuiTableCell-body {
+  padding: 13px 20px;
+  border-bottom-color: #edf1f6;
+}
+
+.table-scroll .MuiTableRow-hover:hover {
+  background: #f7faff;
+}
+
+.table-scroll .MuiTableRow-hover:hover .product-name {
+  color: #1d4ed8;
+}
+
+.table-scroll .MuiTableBody-root .MuiTableRow-root:nth-child(3n + 1) {
+  background: #f7faff;
+}
+
+.table-scroll .MuiTableBody-root .MuiTableRow-root:nth-child(3n + 2) {
+  background: #f5fbf9;
+}
+
+.table-scroll .MuiTableBody-root .MuiTableRow-root:nth-child(3n) {
+  background: #fffaf5;
+}
+
+.table-scroll .MuiTableBody-root .MuiTableRow-root .MuiTableCell-root:first-child {
+  box-shadow: inset 3px 0 0 #2563eb;
+}
+
+.product-avatar.MuiAvatar-root {
+  width: 37px;
+  height: 37px;
+  color: #2563eb;
+  background: #edf3ff;
+}
+
+.product-name.MuiTypography-root {
+  color: #302f45;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.sku-label.MuiTypography-root {
+  display: inline-block;
+  padding: 4px 7px;
+  color: #6d6a86;
+  border-radius: 5px;
+  background: #f7f6fb;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.price-cell {
+  color: #35344a !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+.stock-chip.MuiChip-root {
+  height: 24px;
+  color: #14745d;
+  background: #eaf7f2;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.stock-chip.out-of-stock.MuiChip-root {
+  color: #bd5656;
+  background: #fff0ef;
+}
+
+.table-scroll .MuiIconButton-root {
+  color: #858399;
+}
+
+.table-scroll .MuiIconButton-colorError {
+  color: #bf7777;
+}
+
+.table-scroll .MuiIconButton-root:hover {
+  background: #f4f3fa;
+}
+
+.state-cell.MuiTableCell-root {
+  height: 218px;
+  color: #8d8ba0;
+  text-align: center;
+}
+
+.state-cell .MuiCircularProgress-root {
+  margin-bottom: 11px;
+  color: #6a5bd7;
+}
+
+.state-cell .MuiTypography-root {
+  display: block;
+  font-size: 13px;
+}
+
+.empty-state {
+  padding: 28px !important;
+}
+
+.empty-icon.MuiAvatar-root {
+  width: 43px;
+  height: 43px;
+  margin: 0 auto 10px;
+  color: #7669dc;
+  background: #f0efff;
+}
+
+.empty-title.MuiTypography-root {
+  margin-bottom: 4px;
+  color: #36354b;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.empty-state .MuiButton-root {
+  margin-top: 10px;
+  color: #6658d9;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.table-footer {
+  min-height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 21px;
+  border-top: 1px solid #f0eff5;
+}
+
+.table-footer .MuiTypography-root {
+  font-size: 11px;
+}
+
+.load-alert.MuiAlert-root {
+  margin: 0 20px 14px;
+}
+
+.footer-note.MuiTypography-root {
+  margin-top: 19px;
+  color: #a09eaf;
+  font-size: 11px;
+  text-align: center;
+}
+
+.dialog-title.MuiDialogTitle-root {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 22px 24px 12px;
+  color: #29283f;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+}
+
+.dialog-title .MuiTypography-body2 {
+  margin-top: 3px;
+  font-family: 'DM Sans', 'Segoe UI', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.form-fields.MuiDialogContent-root {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 24px 4px;
+}
+
+.form-fields .MuiInputLabel-root,
+.form-fields .MuiInputBase-input {
+  font-size: 13px;
+}
+
+.form-fields .MuiFormHelperText-root {
+  min-height: 18px;
+  margin-top: 4px;
+  font-size: 10px;
+}
+
+.dialog-actions.MuiDialogActions-root {
+  gap: 8px;
+  padding: 14px 24px 22px;
+}
+
+.dialog-actions .MuiButton-root {
+  min-height: 38px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.dialog-actions .MuiButton-containedPrimary {
+  background: #6658d9;
+}
+
+@media (max-width: 720px) {
+  .main-content {
+    width: calc(100% - 32px);
+    padding-top: 31px;
+  }
+
+  .product-form-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .summary-card.MuiPaper-root {
+    min-height: 96px;
+    align-items: center;
+    padding: 15px 17px;
+  }
+
+  .summary-card .MuiTypography-caption {
+    margin-top: 2px;
+  }
+
+  .page-heading {
+    align-items: flex-start;
+  }
+
+  .catalog-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .toolbar-actions {
+    width: 100%;
+  }
+
+  .search-field {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar {
+    height: 62px;
+    padding: 0 16px;
+  }
+
+  .topbar-tag.MuiChip-root {
+    font-size: 9px;
+  }
+
+  .main-content {
+    width: calc(100% - 24px);
+    padding-top: 25px;
+  }
+
+  .page-heading {
+    gap: 12px;
+  }
+
+  .page-heading .MuiTypography-body1 {
+    max-width: 230px;
+    font-size: 12px;
+  }
+
+  .add-button.MuiButton-root {
+    min-width: 42px;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    overflow: hidden;
+    font-size: 0;
+  }
+
+  .add-button .MuiButton-startIcon {
+    margin: 0;
+  }
+
+  .catalog-toolbar {
+    gap: 13px;
+    padding: 16px;
+  }
+
+  .dialog-title.MuiDialogTitle-root,
+  .form-fields.MuiDialogContent-root {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+}
